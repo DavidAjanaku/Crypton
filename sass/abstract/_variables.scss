@@ -1,0 +1,58 @@
+// FONTS
+@font-face{
+    font-family: "Lato";
+    src: url("fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face{
+    font-family:"cyberpunks";
+    src: url("fonts/cyberpunks-font/Cyberpunks-MVWRY.ttf");
+}
+
+
+
+
+//COLORS
+$color-primary:#0088a9;
+$color-primary-light:#49d3f5;
+$color-primary-light-1:#00c4f5;
+$color-primary-dark:#379db7;
+$color-primary-dark-1:#005e75;
+
+
+$color-secondary-dark:#ff7730;
+$color-secondary-light:#ffb900;
+
+$color-tertiary-light:#2998ff;
+$color-tertiary-dark:#5643fa;
+
+
+
+$color-grey-dark:#777;
+$color-grey-dark-1:#eee;
+$color-grey-dark-2: #999;
+$color-grey-light:#ccc;
+$color-grey-light-1:#f7f7f7;
+
+
+$color-dark:#24252a;
+
+
+$font-primary: 'Lato';
+$font-header:'cyberpunks';
+// $font-display: 'Josefin Sans', sans-serif;
+
+
+$text-color:#edf0f1;
+$text-color-dark:#222;
+
+$color-white:#ffffff;
+$color-shadow:rgb(0,0,0);
+
+// GRID-VARIABLES
+$grid-width:114rem;
+$flex-width:124rem;
+$gutter-vertical:8rem;
+$gutter-horizontal:6rem;
+
+

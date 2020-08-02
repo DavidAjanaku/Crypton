@@ -1,0 +1,333 @@
+.transaction{
+    width: 100%;
+    position: relative;
+    background: $color-grey-light;
+}
+
+.top{
+   width: 100%;
+   height: 60px;
+   left: 0;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   background:$color-grey-light-1;
+   padding: 0 3rem;
+   font-size: 1.5rem;
+    position: absolute;
+    top: 8rem;
+    @include respond(tab-port){
+        top: 0;
+        padding-right: 10rem;
+    }
+
+   &__header{
+       margin-right: auto;
+       font-size: 3rem;
+       font-weight: 700;
+       color:$text-color-dark;
+
+
+       span{
+           cursor: pointer;
+           text-decoration: none;
+            color:$text-color-dark;
+            position: relative;
+
+           &:hover{
+                &::after{
+                    content: attr(data-title);
+                    position: absolute;
+                    z-index: 5;
+                    font-size: 1rem;
+                    background-color: #555;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                    width: 120px;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 5px 0;
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: -60px;
+                    opacity: 1;
+                    transition: opacity 1s;
+                }
+           }
+       }
+   }
+}
+
+.bottom{
+    position: absolute;
+    top: 16rem;
+    left: 0;
+    right: 0;
+    width: calc(100% - 4em);
+    height: fit-content;
+    margin:auto;
+    background-color:$color-grey-light-1;
+    padding:1em 2em;
+    display: flex;
+    border-radius: 5px;
+
+    @include respond(tab-port){
+        flex-direction: column;
+        top: 12rem;
+    }
+
+
+
+
+    &__box{
+        width: 50%;
+        padding: 2em;
+
+        &--deposit{
+            display: none;
+        }
+
+        @include respond(tab-port){
+            width: 100%;
+        }
+
+       
+    }
+}
+
+.coin-select{
+    &__label{
+        font-size: 1.4rem;
+        display: block;
+        padding: 1em 0;
+    }
+
+    &__input{
+        width: 300px;
+        height: 35px;
+        border: .5px solid $color-grey-light;
+        border-radius: 3px;
+        font-family: $font-primary;
+        font-weight: 300;
+        font-size: 1.7rem;
+        padding: 0 2px;
+        color: $color-grey-dark;
+
+        @include respond(phone-sm){
+            width: 100%;
+        }
+
+
+        &:focus{
+            outline: none;
+            border: .5px solid $color-primary;
+        }   
+    }
+}
+
+.coin-details{
+    font-size: medium;
+    font-weight: 300;
+
+    &__box{
+        padding: 1em 0;
+        font-weight: 400;
+    }
+
+    &__instructions{
+        color: rgb(118, 128, 143);
+        font-size:14px ;
+        font-weight: 400;
+        padding-left: 1em;
+    }
+
+ 
+}
+
+[data-text]::after{
+    content:attr(data-text);
+    text-transform: uppercase;
+}
+
+.coin-form-box{
+    width: 100%;
+    height: 450px;
+    background: $color-white;
+    border-radius: 15px;
+    padding: 2em;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+.coin-form{
+    width: 75%;
+    margin: auto;
+
+    @include respond(phone){
+        width: 95%;
+    }
+
+    &__label{
+        display: block;
+        font-size: small;
+    }
+
+    &__input,&__input--amount-box{
+        width: 100%;
+        height: 40px;
+        border: .5px solid $color-grey-light;
+        border-radius: 3px;
+        font-family: $font-primary;
+        font-weight: 300;
+        font-size: 1.7rem;
+        padding: 0 1rem;
+        color: $color-grey-dark;
+        position: relative;
+        font-family: $font-primary;
+        font-size: small;
+        background-color: transparent;
+
+        &::placeholder{
+            color: rgba(118, 128, 143,.4);
+            
+        }
+
+        &:focus{
+            outline: none;
+            border: .5px solid $color-primary;
+        } 
+
+        &--amount-box{
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &:focus-within{
+                border: .5px solid $color-primary; 
+            }
+
+        
+        }
+       
+
+        &--amount{
+            position: absolute;
+            width: 88%;
+            height: 40px;
+            left: 0;
+            border: 1px solid transparent;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button{
+                appearance: none;
+                margin: 0;
+            }
+           
+            &:focus{
+                outline: none;
+                border:none;
+            }
+
+            
+            @include respond (phone){
+                width: 85%;
+            }
+        }
+
+        .amount-type{
+            text-transform: uppercase;
+            width: 12%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            padding: 0px 2px;
+            position: absolute;
+            right: 0;
+
+            @include respond (phone){
+                width: 15%;
+            }
+        }
+
+        #coin-balance{
+            &::after{
+                content: attr(data-text);
+                text-transform: uppercase;
+            }
+        }
+        
+    
+    }
+
+    &__submit{
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-weight: 600;
+        font-size: medium;
+
+        &:disabled{
+            cursor: not-allowed;
+            color: rgba(118, 128, 143,.3);
+        }
+
+        &:not(:disabled){
+            cursor: pointer;
+            color: $color-white;
+            background-color: $color-primary-light;
+
+            &:hover{
+                background-color: $color-primary;
+            }
+        }
+    }
+
+}
+
+
+.tooltip {
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    background-color: $color-grey-dark-1;
+    cursor: pointer;
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 320px;
+        background-color:$color-grey-dark-1;
+        color: $color-grey-dark;
+        text-align: center;
+        padding: 5px 1em;
+        border-radius: 6px;
+        position: absolute;
+        top: -5px;
+        left: 115%;
+        z-index: 1;
+        list-style: none;
+
+        li{
+            padding: .5rem 0;
+        }
+    }
+
+    &:hover .tooltiptext {
+        visibility: visible;
+    }
+}
+
+.deposit{
+    .bottom__box--deposit{
+        display: block;
+    }
+
+    .bottom__box--withdraw{
+        display: none;
+    }
+}
+
