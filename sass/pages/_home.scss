@@ -12,6 +12,11 @@
             width: 90%;
             margin: 0 auto;
         }
+
+        @include respond(phone){
+            font-size: small;
+        }
+
     }
 
     &__img{
@@ -35,7 +40,7 @@
 
 
 }
-.section-calculate-profit{
+.section-investment{
     transform: skewY(-5deg);
     background-image: linear-gradient(
         to bottom right,

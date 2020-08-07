@@ -42,6 +42,7 @@
     }
        
     &--2{
+        transform: translateX(-15px);
         &::before{
             content: "02";
             background-image: linear-gradient(

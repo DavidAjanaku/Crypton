@@ -47,28 +47,30 @@ var UIController = (function(){
             return document.querySelector(domStrings.transactionBottom);
         },
 
-        deposit : function(element){
-        
-            element.classList.add('deposit');
-
+        setCLass : function(klass){
+            var surpposedClass = 'deposit';
+            
+                if(klass === surpposedClass){
+                    if(!this.classList.contains(surpposedClass))
+                        this.classList.add(surpposedClass);
+                    else
+                        return;
+                }else{
+                    this.classList.remove(surpposedClass);
+                }
         },
 
-        withdraw : function(element){
-        
-            element.classList.remove('deposit');
 
-        },
 
         getInput : function(){
             return document.querySelector(domStrings.selectInput).value;
         },
-
         
         setType : function (type){
-                 document.querySelector(domStrings.coinBalance).setAttribute('data-text',type);
-                  document.querySelector(domStrings.amountType).innerHTML = type;
-                   document.querySelector(domStrings.balace).setAttribute('data-text',type);
-          },
+            document.querySelector(domStrings.coinBalance).setAttribute('data-text',type);
+            document.querySelector(domStrings.amountType).innerHTML = type;
+            document.querySelector(domStrings.balace).setAttribute('data-text',type);
+        },
 
         getDomStrings : function () {
             return domStrings;
@@ -86,26 +88,26 @@ var appController = (function (model,view) {
 
         ctrlChangeItem();
 
-        document.querySelector(DOM.depositLink).addEventListener('click',toggleTransaction.addDeposit);
+        document.querySelector(DOM.depositLink).addEventListener('clikkck',ctrlToggleDeposit);
 
-        document.querySelector(DOM.withdrawLink).addEventListener('click',toggleTransaction.removeDeposit);
+        document.querySelector(DOM.withdrawLink).addEventListener('click', ctrlToggleDeposit);
 
     }
 
-    var toggleTransaction = function(){
-        // GET ELEMENT BOTTOM
-        var ele = view.getBottom();
+    var ctrlToggleDeposit = function(e){
+        // 1. GET BOTTOM ELEMENT
+        var bottom = view.getBottom();
 
-       return {
-           addDeposit :function(){
-               view.deposit(ele);
-           },
+        // 2. GET TARGET OF ELEMENT CLICKED
+        var elementText = e.target.innerHTML.toLowerCase();
 
-            removeDeposit :function(){
-                view.withdraw(ele);
-            }
-       };
+        // 3. BIND THE "THIS" VARIABLE OF THE SETCLASS METHOD TO BOTTOM AND STORE IN A VARIABLE
+        var element = view.setCLass.bind(bottom);
 
+        // 4. CALL THE BOUNDED FUNCTION STORED IN THE VARIABLE
+        element(elementText);
+
+        
         
     }
 

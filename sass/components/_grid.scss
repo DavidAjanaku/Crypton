@@ -10,6 +10,10 @@
     @include respond(tab-port){
         flex-direction: column;
     }
+
+    @include respond (phone){
+        top: 10%;
+    }
     
     &__first{
         padding: 0 1rem;
@@ -19,6 +23,8 @@
            padding: 0;
            margin-bottom: 5rem;
         }
+
+
 
 
         &--content{
@@ -194,6 +200,11 @@
                     font-size: 1.6rem;
                     line-height: 2em;
                 }
+
+                @include respond(tab-port){
+                    font-size: small;
+                    line-height: 2em;
+                }
             }
         }
 
@@ -212,6 +223,10 @@
         }
          p{
             font-size: 1.5rem;
+
+            @include respond(tab-port){
+                font-size: small;
+            }
         }
     }
 
@@ -219,5 +234,19 @@
         font-size: 32px;
         margin-right: 10px;
         color: $color-primary;
+    }
+}
+
+.col-grid{
+    display: block;
+    width: 100%;
+    @include respond(phone){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:5px;
+    }
+
+    @include respond(phone-sm){
+        grid-template-columns: repeat(2,1fr);
     }
 }
