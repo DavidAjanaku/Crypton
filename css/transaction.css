@@ -1,0 +1,57 @@
+.history-container{
+    top: 100px;
+    position: relative;
+   width: 90%;
+   margin: auto; 
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    border: 0ch;
+}
+
+td{
+    border: 0;
+    font-size: 15px;
+}
+
+th{
+    border: 0;
+    font-size: 15px;
+    background-color: rgb(238, 238, 243);
+    color: rgb(185, 185, 182);
+}
+
+.contain{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.history-containe{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+.wrapper{
+       
+}
+
+h1{
+    font-size: 20px;
+}
+
+.coins{
+    font-weight: 600;
+}
+
+@media only screen and (min-width:768px){  
+
+
+}

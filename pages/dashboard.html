@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptone - Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/c42702229f.js" ></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu__bar"></div>
+    </div>
+
+   <div class="navigation">
+     
+
+       <div class="overlay"></div>
+
+       <nav class="nav">
+           <a href="index.html" class="nav__brand">cryptone</a>
+
+           <ul class="nav__list">
+               <li class="nav__item">
+                   <a href="index.html#about" class="nav__link">what is cryptone?</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="index.html#investment" class="nav__link">investments</a>
+                </li>
+
+                 <li class="nav__item">
+                    <a href="faq.html" class="nav__link">F.A.Q</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="contact.html" class="nav__link">get in touch</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="login.html" class="nav__link">logout</a>
+                 </li>
+
+           </ul>
+       </nav>
+   </div>
+
+
+   <section class="dashview">
+        <aside class="aside">
+          <ul class="aside__list">
+              <li class="aside__item">
+                  <div class="balance-check">
+                      <h2 class="balance-check__header">Total balance</h2>
+                      <span class="coin-balance">%value%</span>
+                      <span class="coin-type">%type%</span>
+                  </div>
+              </li>
+
+              <li class="aside__item active">
+                    <a href="#" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-home"></i>
+                            <span class="figure-box__text">Dashboard</span>
+                        </figure>
+                    </a>
+              </li>
+
+                <li class="aside__item ">
+                    <a href="settings.html" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-user-shield"></i>
+                            <span class="figure-box__text">Settings</span>
+                        </figure>
+                    </a>
+                </li>
+
+                <li class="aside__item ">
+                    <a href="referral.html" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-people-arrows"></i>
+                            <span class="figure-box__text">Referral</span>
+                        </figure>
+                    </a>
+                </li>
+          </ul>
+        </aside>
+
+        <div class="main">
+            <div class="main__top">
+                <h1 class="main__top__heading">
+                    Dashboard
+                </h1>
+                <p class="main__top__desc">Welcome to Cryptone's dashboard</p>
+            </div>
+
+
+            <div class="main__left">
+                <div class="main__left--top">
+                    <figure class="main__left__shape">
+                        <img src="../images/nat-8.jpg" alt="USER__IMAGE" class="main__left__img">
+                        <figcaption class="main__left__caption">user's name</figcaption>
+                    </figure>
+                </div>
+
+                <div class="main__left--bottom">
+                   <ul class="main__left--bottom__list">
+                       <li class="main__left--bottom__item">
+                            <a href="bitcoin-dashboard.html" class="main__left--bottom__link">
+                                <figure class="figure-box">
+                                    <img src="../images/png/2.png" alt="btc" class="figure-box__img">
+                                     <span class="figure-box__text">Bitcoin</span>
+                                 </figure>
+                            </a>
+                       </li>
+
+                       <li class="main__left--bottom__item">
+                            <a href="ethereum-dashboard.html" class="main__left--bottom__link">
+                                <figure class="figure-box">
+                                    <img src="../images/png/5.png" alt="btc" class="figure-box__img">
+                                    <span class="figure-box__text">Ethereum</span>
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li class="main__left--bottom__item">
+                            <a href="litecoin-dashboard.html" class="main__left--bottom__link">
+                                <figure class="figure-box">
+                                    <img src="../images/png/3.png" alt="btc" class="figure-box__img">
+                                     <span class="figure-box__text">Litecoin</span>
+                                 </figure>
+                            </a>
+                       </li>
+
+                       <li class="main__left--bottom__item">
+                        <a href="bitcoin-cash-dashboard.html" class="main__left--bottom__link">
+                            <figure class="figure-box">
+                                <img src="../images/png/4.png" alt="btc" class="figure-box__img">
+                                <span class="figure-box__text">Bitcoin Cash</span>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li class="main__left--bottom__item">
+                        <a href="ethereum-classic-dashboard.html" class="main__left--bottom__link">
+                            <figure class="figure-box">
+                                <img src="../images/png/1.png" alt="btc" class="figure-box__img">
+                                 <span class="figure-box__text">Ethereum classic</span>
+                             </figure>
+                        </a>
+                   </li>
+                   </ul>
+                </div>
+            </div>
+
+
+            <div class="main__right">
+                <div class="main__right__top">
+                   <div class="coin-img-box">
+                        <img src="../images/img-btc.png" alt="current coin img">
+                   </div>
+                    <div class="coin-price-box">
+                        <h3>Current Price</h3>
+                        <span class="current-coin-price" data-currency="$">%value%</span>
+                    </div>
+                </div>
+                <div class="main__right__middle">
+                    GRAPH
+                </div>
+                <div class="main__right__bottom">
+                    <a href="#" class="dash-deposit btn btn--transaction">deposit</a>
+                    <a href="#" class="dash-withdraw btn btn--transaction">withdraw</a>
+                </div>
+            </div>
+        </div>
+
+   </section>
+
+   <script src="../script/script.js"></script>
+</body>
+</html>

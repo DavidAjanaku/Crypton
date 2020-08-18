@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - Wallet - Cryptone</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="menu__bar"></div>
+    </div>
+
+    <div class="navigation">
+     
+
+        <div class="overlay"></div>
+ 
+        <nav class="nav">
+            <a href="index.html" class="nav__brand">
+                 <img src="../images/png/logo1.png" alt="logo" class="logo">
+            </a>
+ 
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html#about" class="nav__link">what is cryptone?</a>
+                 </li>
+ 
+                 <li class="nav__item">
+                     <a href="index.html#investment" class="nav__link">investments</a>
+                 </li>
+ 
+                  <li class="nav__item">
+                     <a href="faq.html" class="nav__link">F.A.Q</a>
+                  </li>
+ 
+                  <li class="nav__item">
+                     <a href="contact.html" class="nav__link">get in touch</a>
+                  </li>
+ 
+                  <li class="nav__item">
+                     <a href="transaction.html" class="nav__link">transaction</a>
+                  </li>
+ 
+            </ul>
+        </nav>
+    </div>
+
+    <section class="transaction">
+        <div class="top">
+            <span class="top__header">
+                <span data-title="Withdraw" class="withdraw-link">Withdraw</span> |
+                <span data-title="Make a deposit" class="deposit-link">Deposit</span>
+            </span>
+            <span class="top__text">24hr Withdrawal Limit: <b>2 BTC<b></span>
+        </div>
+
+        <div class="bottom">
+           <div class="bottom__box bottom__box--withdraw">
+               <div class="coin-select">
+                   <label for="coin-input" class="coin-select__label">Coin</label>
+                   <select name="coin" id="coin-input" class="coin-select__input">
+                       <option value="btc">
+                          Bitcoin
+                        </option>
+                       <option value="eth">
+                           Ethereum
+                        </option>
+                       <option value="ltc">
+                           Litecoin
+                        </option>
+                       <option value="bch">
+                           Bitcoin Cash
+                        </option>
+                       <option value="etc">
+                           Ethereum classic
+                        </option>
+                   </select>
+               </div>
+
+               <div class="coin-details">
+                 <div class="coin-details__box">
+                    <span class="coin-details__text">Total balance:</span>
+                    <span class="coin-details__balance" data-text="%type%">%value% </span>
+                 </div>
+
+                    <ol class="coin-details__instructions">
+                        <li class="coin-details__instructions__list">
+                            Do not withdraw directly to a crowdfund or ICO address, as your account will not be credited with tokens from such sales.
+                        </li>
+                        <li class="coin-details__instructions__list">
+                            When withdrawing to the Binance user's address, the handling fee will be returned to the Current Account by default.
+                        </li>
+                    </ol>
+               </div>
+
+           </div>
+
+           <div class="bottom__box bottom__box--withdraw">
+               <div class="coin-form-box">
+                <form class="coin-form">
+
+                   <div class="coin-form-group u-margin-bottom--medium">
+                        <label for="coin-address" class="coin-form__label u-margin-bottom--small">
+                            Recipient's BTC Address
+                        </label>
+                        <input type="text" id="coin-address" class="coin-form__input">
+                   </div>
+
+                    <div class="coin-form-group u-margin-bottom--medium">
+                        <label for="coin-amount" class="coin-form__label u-margin-bottom--small">
+                            Amount
+                        </label>
+                        <div class="coin-form__input--amount-box">
+                            <input type="number" id="coin-amount" class="coin-form__input coin-form__input--amount" placeholder="Minimum Withdrawal 0.001">
+                            <span class="amount-type">%type%</span>
+                        </div>
+                    </div>
+
+                    <div class="coin-form-group u-margin-bottom--big">
+                        <label class="coin-form__label u-margin-bottom--small" id="coin-balance" data-text="%type%">
+                            Available Balance 
+                            <span class=".avail-bal">%value%</span>
+                        </label>
+                   </div>
+
+                   <div class="coin-form-group">
+                        <input type="submit" value="Submit" class="coin-form__submit" >
+                   </div>
+
+                </form>
+               </div>
+           </div>
+           
+            <div class="bottom__box bottom__box--deposit">
+                <div class="coin-select">
+                    <label for="coin-input" class="coin-select__label">Coin</label>
+                    <select name="coin" id="coin-input" class="coin-select__input">
+                        <option value="btc">
+                           Bitcoin
+                         </option>
+                        <option value="eth">
+                            Ethereum
+                         </option>
+                        <option value="ltc">
+                            Litecoin
+                         </option>
+                        <option value="bch">
+                            Bitcoin Cash
+                         </option>
+                        <option value="etc">
+                            Ethereum classic
+                         </option>
+                    </select>
+                </div>
+ 
+                <div class="coin-details">
+                  <div class="coin-details__box">
+                     <span class="coin-details__text">Total balance:</span>
+                     <span class="coin-details__balance" data-text="%type%">%value% </span>
+                  </div>
+ 
+                     <ol class="coin-details__instructions">
+                         <li class="coin-details__instructions__list">
+                             Do not withdraw directly to a crowdfund or ICO address, as your account will not be credited with tokens from such sales.
+                         </li>
+                         <li class="coin-details__instructions__list">
+                             When withdrawing to the Binance user's address, the handling fee will be returned to the Current Account by default.
+                         </li>
+                     </ol>
+                </div>
+
+                <div class="tooltip">Tips:
+                        <ul class="tooltiptext">
+                            <li>
+                                Coins will be deposited after 1 network confirmations.
+                            </li>
+                            <li>
+                                Until 2 confirmations are made, an equivalent amount of your assets will be temporarily unavailable for withdrawals.
+                            </li>
+                        </ul>
+                    </span>
+                  </div>
+            </div>
+            <div class="bottom__box bottom__box--deposit">2</div>
+        </div>
+    </section>
+
+
+
+
+    <script src="../script/script.js"></script>
+</body>
+</html>z

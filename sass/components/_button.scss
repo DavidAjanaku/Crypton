@@ -46,16 +46,24 @@
         $color-primary-light,
     );
     color: $color-white;
+
+        &::after{
+            content:"";
+            background-image: linear-gradient(
+            to bottom right,
+            $color-primary-dark,
+            $color-primary-light,
+        );
+        }
    }
 
-   &::after{
-       content:"";
-       background-image: linear-gradient(
-        to bottom right,
-        $color-primary-dark,
-        $color-primary-light,
-    );
-   }
+    &--transaction{
+        background-color: $color-trans-btn;
+        &:hover{
+            background-color: $color-trans-btn-dark;
+        }
+    }
+ 
 
 }
 

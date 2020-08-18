@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptone Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/c42702229f.js" ></script>
+    <link rel="stylesheet" href="../Crypton Project/css/style.css">
+</head>
+<body>
+
+    <style>
+        .main__left__shape{
+  clip-path: none;
+  background: none;
+  
+}
+#head{
+    font-size: 20px;
+}
+.mains{
+    background: azure;
+    height: 70px;
+}
+
+    </style>
+    <div class="menu">
+        <div class="menu__bar"></div>
+    </div>
+
+   <div class="navigation">
+     
+
+       <div class="overlay"></div>
+
+       <nav class="nav">
+        <a href="index.html" class="nav__brand">
+            <img src="../images/png/logo1.png" alt="logo" class="logo">
+       </a>
+           <ul class="nav__list">
+               <li class="nav__item">
+                   <a href="index.html#about" class="nav__link">what is cryptone?</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="index.html#investment" class="nav__link">investments</a>
+                </li>
+
+                 <li class="nav__item">
+                    <a href="faq.html" class="nav__link">F.A.Q</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="contact.html" class="nav__link">get in touch</a>
+                 </li>
+
+                 <li class="nav__item">
+                    <a href="login.html" class="nav__link">logout</a>
+                 </li>
+
+           </ul>
+       </nav>
+   </div>
+
+
+   <section class="dashview">
+        <aside class="aside">
+          <ul class="aside__list">
+              <li class="aside__item">
+                  <div class="balance-check">
+                      <h2 class="balance-check__header">Total balance</h2>
+                      <span class="coin-balance">%value%</span>
+                      <span class="coin-type">%type%</span>
+                  </div>
+              </li>
+
+              <li class="aside__item active">
+                    <a href="dashboard.html" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-home"></i>
+                            <span class="figure-box__text">Dashboard</span>
+                        </figure>
+                    </a>
+              </li>
+
+                <li class="aside__item ">
+                    <a href="settings.html" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-user-shield"></i>
+                            <span class="figure-box__text">Settings</span>
+                        </figure>
+                    </a>
+                </li>
+
+                <li class="aside__item ">
+                    <a href="referral.html" class="aside__link">
+                        <figure class="figure-box">
+                            <i class="figure-box__icon fa fa-people-arrows"></i>
+                            <span class="figure-box__text">Referral</span>
+                        </figure>
+                    </a>
+                </li>
+          </ul>
+        </aside>
+
+        <div class="main">
+            <div class="main__top">
+                <h1 class="main__top__heading" style="color: rgb(70, 69, 69);">
+                    Ethereum Dashboard
+                </h1>
+                <p class="main__top__desc">Welcome to Your Ethereum dashboard</p>
+            </div>
+
+
+            <div class="main__left">
+                <div class="main__left--top">
+                    <figure class="main__left__shape">
+                        <img src="../images/5.png" width="50" class="dashboard-btc">
+                        <h1>Ethereum Dashboard</h1>
+                    </figure>
+                </div>
+                <div class="mains">
+                   <h1 id="head"> Ethereum Balance</h1>
+                   <span class="coin-balance">%value%</span>
+
+                </div>
+
+                <div class="main__left--bottom">
+                   <ul class="main__left--bottom__list">
+                    
+
+                       <li class="main__left--bottom__item">
+                            <a href="bitcoin-dashboard.html" class="main__left--bottom__link">
+                                <figure class="figure-box">
+                                    <img src="../images/btcs.png" alt="btc" class="figure-box__img">
+                                    <span class="figure-box__text">Bitcoin</span>
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li class="main__left--bottom__item">
+                            <a href="litecoin-dashboard.html" class="main__left--bottom__link">
+                                <figure class="figure-box">
+                                    <img src="../images/png/3.png" alt="btc" class="figure-box__img">
+                                     <span class="figure-box__text">Litecoin</span>
+                                 </figure>
+                            </a>
+                       </li>
+
+                       <li class="main__left--bottom__item">
+                        <a href="bitcoin-cash-dashboard.html" class="main__left--bottom__link">
+                            <figure class="figure-box">
+                                <img src="../images/png/4.png" alt="btc" class="figure-box__img">
+                                <span class="figure-box__text">Bitcoin Cash</span>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li class="main__left--bottom__item">
+                        <a href="ethereum-classic-dashboard.html" class="main__left--bottom__link">
+                            <figure class="figure-box">
+                                <img src="../images/png/1.png" alt="btc" class="figure-box__img">
+                                 <span class="figure-box__text">Ethereum classic</span>
+                             </figure>
+                        </a>
+                   </li>
+                   </ul>
+                </div>
+            </div>
+
+
+            <div class="main__right">
+                <div class="main__right__top">
+                   <div class="coin-img-box">
+                        <img src="../images/img-eth.png" alt="current coin img">
+                   </div>
+                    <div class="coin-price-box">
+                        <h3>Current Price</h3>
+                        <span class="current-coin-price" data-currency="$">%value%</span>
+                    </div>
+                </div>
+                <div class="main__right__middle">
+                    <div style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=145&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>                </div>
+                <div class="main__right__bottom">
+                    <a href="transaction.html" class="dash-deposit btn btn--transaction">deposit</a>
+                    <a href="transaction.html" class="dash-withdraw btn btn--transaction">withdraw</a>
+                </div>
+            </div>
+        </div>
+
+   </section>
+
+   <script src="../script/script.js"></script>
+</body>
+</html>

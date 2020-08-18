@@ -37,6 +37,7 @@
     &__second{
         width: 200rem;
 
+
         @include respond(tab-port){
             width: 75rem;
         }

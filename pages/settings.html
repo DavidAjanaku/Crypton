@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+  <div class="menu">
+    <div class="menu__bar"></div>
+</div>
+
+<div class="navigation">
+  
+
+    <div class="overlay"></div>
+
+    <nav class="nav">
+ <a href="index.html" class="nav__brand">
+            <img src="../images/png/logo1.png" alt="logo" class="logo">
+       </a> 
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="index.html#+" class="nav__link">what is cryptone?</a>
+             </li>
+
+             <li class="nav__item">
+                 <a href="index.html#investment" class="nav__link">investments</a>
+             </li>
+
+              <li class="nav__item">
+                 <a href="faq.html" class="nav__link">F.A.Q</a>
+              </li>
+
+           
+
+              <li class="nav__item">
+                 <a href="login.html" class="nav__link">Logout</a>
+              </li>
+              <li class="nav__item">
+                <a href="contact.html" class="nav__link">Contact</a>
+             </li>
+
+        </ul>
+    </nav>
+</div>
+      
+
+   <section class="dashview">
+    <aside class="aside">
+      <ul class="aside__list">
+          <li class="aside__item">
+              <div class="balance-check">
+                  <h2 class="balance-check__header">Total balance</h2>
+                  <span class="coin-balance">%value%</span>
+                  <span class="coin-type">%type%</span>
+              </div>
+          </li>
+
+          <li class="aside__item active">
+                <a href="#" class="aside__link">
+                    <figure class="figure-box">
+                        <i class="figure-box__icon fa fa-home"></i>
+                        <span class="figure-box__text">Dashboard</span>
+                    </figure>
+                </a>
+          </li>
+
+            <li class="aside__item ">
+                <a href="settings.html" class="aside__link">
+                    <figure class="figure-box">
+                        <i class="figure-box__icon fa fa-user-shield"></i>
+                        <span class="figure-box__text">Settings</span>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="aside__item ">
+                <a href="referral.html" class="aside__link">
+                    <figure class="figure-box">
+                        <i class="figure-box__icon fa fa-people-arrows"></i>
+                        <span class="figure-box__text">Referral</span>
+                    </figure>
+                </a>
+            </li>
+      </ul>
+    </aside>
+      <div class="form down" >
+        <div class="head" class="signup">
+          <div onclick="changeTab(this)" data-tab="login" class="login-tab">Security</div>
+          <div onclick="changeTab(this)" data-tab="signup" class="signup-tab">my wallet</div>
+        </div>
+        <div class="body" id="form-body">
+          <div class="login">
+            <div class="form-row">
+              <label for="">Account Email</label>
+              <input type="text" placeholder="Email">
+              <label for="">Email</label>
+              <input type="text" placeholder="Current Password">
+              <input type="text" placeholder="New Password">
+              <input type="text" placeholder="Retype Password">
+
+              <h3>SAVE</h3>
+            </div>
+           
+            
+            
+         
+          </div>
+          <div class="signup">
+            <div class="form-row">
+         <div>
+             <img src="bitcoin.png" alt="" class="crypto">
+             <input type="text" placeholder="Input Bitcoin Wallet Address" ><br>
+             <img src="bitcoin-cash.png" alt="" class="crypto">
+             <input type="text" placeholder="Input Bitcoin Cash Wallet Address"> <br>
+             <img src="litecoin.png" alt="" class="crypto">
+             <input type="text" placeholder="Input Litecoin Wallet Address" name="" id=""><br>
+             <img src="ethereum.png" alt="" class="crypto">
+             <input type="text" placeholder="Input Euthereum Wallet Address" name="" id=""><br>
+             <img src="ethereum-classic.png" alt="" class="crypton">
+             <input type="text" placeholder="Input Ethereum Classic Wallet Address">
+             
+             <h3>Save Wallet</h3>
+
+         </div>
+        </div>
+      </div>
+        <script>
+           function changeTab(ref){
+  try {
+  if(ref.getAttribute("data-tab") == "login"){
+    document.getElementById("form-body").classList.remove('active');
+    ref.parentNode.classList.remove('signup');
+  } else {
+    document.getElementById("form-body").classList.add('active');
+    ref.parentNode.classList.add('signup');
+  }
+  } catch(msg){
+    console.log(msg);
+  }
+} 
+
+
+        </script>
+        <script src="../script/script.js"></script>
+
+</body>  
+</html>

@@ -88,7 +88,7 @@ var appController = (function (model,view) {
 
         ctrlChangeItem();
 
-        document.querySelector(DOM.depositLink).addEventListener('clikkck',ctrlToggleDeposit);
+        document.querySelector(DOM.depositLink).addEventListener('click',ctrlToggleDeposit);
 
         document.querySelector(DOM.withdrawLink).addEventListener('click', ctrlToggleDeposit);
 

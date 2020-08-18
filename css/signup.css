@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:rgb(41, 47, 78);
+    background-repeat: no-repeat;
+    /* background-color: blue; */
+  }
+  
+ input{
+     background-color: transparent;
+ } 
+
+ p,a{
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     text-decoration: none;
+     font-size: 10px;
+ }
+ .hid{
+   padding-top: 150px;
+ }
+
+h1{
+    margin:  0px 0 0 0;
+    font-size: 3em;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#top{
+  padding-bottom: 50px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+form{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.terms{
+  margin-top: 50px;
+}
+
+.log-form{
+  position: absolute;
+  top: 200px;
+}
+.hide-mobile{
+    display: none;
+}
+
+form input{
+    margin: 10px 0 10px 0;
+}
+.photo{
+    display: none;
+}
+
+input[type=text], input[type=password], [type=email]{
+    /* box-sizing: border-box; */
+    outline: none;
+    border: none;
+    border-bottom: 1px  solid rgb(223, 217, 217);
+    font-family: cursive;
+    width: 80%;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+  
+  }
+
+  input[type=submit]{
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #4cd5df;
+    opacity: 0.7;
+    border-radius: 3px;
+    width: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  input[type=submit]:hover{
+    background: #0d5055;
+
+
+  }
+  .menu{
+    margin-top: 10px;
+    
+    
+  }
+
+
+    .log-btn{
+      color: rgb(39, 236, 236);
+    }
+  
+  .click-btn:hover{
+    background-color: darkcyan;
+    border-radius: 10px;
+  }
+
+ 
+  @media only screen and (min-width:768px){  
+
+    @font-face {
+      font-family: "cyberpunks";
+      src: url("fonts/cyberpunks-font/Cyberpunks-MVWRY.ttf");
+    }
+
+  *{
+      margin: 0;
+
+  }
+
+  #top{
+    display: block;
+    padding-bottom: 100px;
+  font-size: 50px;
+  font-weight: 900;
+  }
+  body{
+    background: none;
+  }
+  .body::before{
+    background-image: url(../images/currency.png);
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width:65%;
+    height:100%;
+    z-index:-1;
+    opacity: 1; 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+    .container{
+        width: 30%;
+        height: 40%;
+        margin-left: -0px;
+    }
+
+    h1{
+        margin-top: 150px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: lightcyan;
+    }
+
+    .hide{
+      display: none;
+    }
+    
+    form{
+        margin: 10px 0 0 0;
+    }
+
+    form{
+      text-align: center;
+      width: 40%;
+      margin-top: 80px;
+  }
+
+    /* form{
+      text-align: center;
+      width: 50%;
+      margin: auto;
+  } */
+    
+
+  .hid{
+    padding-top: 0px;
+  }
+    body:after{
+      background-image: linear-gradient(145deg,#858bbd,rgba(59, 145, 136, 0.9));
+      content: "";
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width:50%;
+        height:100%;
+        z-index:-1;
+        opacity: 1; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+  
+   .hide-mobile li{
+    list-style: none;
+    margin-left: 150px;
+   }
+  
+   .contact li:hover{
+       background-color: green;
+       padding: 10px;
+       border-radius: 5px;
+   }
+   .hide-mobile {
+       margin-left: -200px;
+       
+       
+   }
+   form input{
+    margin: 5px 0 10px 0;
+}
+   
+   input[type=submit]{
+      width: 40%;
+   }
+   input::placeholder{
+     font-size: 20px;
+     color: rgb(212, 207, 207);
+     opacity: 0;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   input[type=text], input[type=password], [type=email]{
+    width: 70%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .navigation {
+    width: 100%;
+    position: absolute;
+    height: 12%;
+    top: 0;
+  }
+
+
+  .navigation-logo h1{
+    margin-left: -9em;
+    margin-top: 60px;
+    font-family: cyberpunks;
+    color: #fff;
+  }
+
+  .mobile-version{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+ 
+ 
+  .navigation{
+    height: 100px;
+    display: block;
+  }
+
+  .navigation-logo, .mobile-version{
+    margin-top: -15px;
+  }
+
+  h2{
+    color: #fff;
+    margin-left: 1em;
+    margin-top: 30px;
+    font-family: cyberpunks;
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  .click-btn:hover{
+    background-color: darkcyan;
+    border-radius: 10px;
+  }
+
+  }
