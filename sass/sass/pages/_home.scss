@@ -1,0 +1,58 @@
+.section-about{
+    background:$color-grey-light-1 ;
+    padding: 25rem  2em;
+    margin-top: -22vh;
+
+    &__text{
+        text-align: justify;
+        font-size: 1.6rem;
+        line-height: 2em;
+
+        @include respond(tab-port){
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include respond(phone){
+            font-size: small;
+        }
+
+    }
+
+    &__img{
+        width: 100%;
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+}
+
+.section-how-it-works{
+    background:$color-grey-light-1 ;
+    margin-top: -22vh;
+    padding-bottom: 20rem;
+}
+
+.section-what-we-accept{
+    background: $color-grey-light-1;
+    padding: 5rem 5rem 25rem;
+    margin-top: -20vh;
+
+
+}
+.section-investment{
+    transform: skewY(-5deg);
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-tertiary-light,.7),
+        rgba($color-tertiary-dark,.7),
+    ),url("../../images/angled-shapes-BW.jpg");
+    background-position: center;
+    margin-top: -15rem;
+    padding: 15rem 0;
+
+    & > *{
+        transform: skewY(5deg);;
+    }
+}
+

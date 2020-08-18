@@ -1,0 +1,159 @@
+
+.main-header-top{
+    background-image: url(../images/hero1.jpeg);
+    height: 200px;
+    width: 100%;
+}
+
+.main-header-top p{
+    font-size: 28px;
+    padding: 10px;
+    color: #fff;
+}
+.card{
+    margin-top: -30px;
+    background: #fff;
+    width: 100%;
+    margin: auto;
+}
+
+.card p{
+    font-size: 20px;
+}
+
+.card span{
+    display: flex;
+    padding: 10px;
+    color: grey;
+}
+
+#ref-id{
+    margin-left: 40%;
+    color: rgb(155, 150, 150);
+}
+
+#ref-icon{
+    text-align: center;
+}
+
+.card-2{
+    padding-left: 10px;
+    color: grey;
+}
+
+#ref-link{
+    font-size: 16px;
+    background: rgb(11, 167, 133);
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.card a{
+    color: white;
+
+}
+
+#hid{
+    display: none;
+}
+
+.another{
+    margin-top: 10px;
+    height: 50px;
+}
+
+.another span p{
+    font-size: 13px;
+}
+
+.another span p a{
+    color: black;
+    font-size: 13px;
+    margin-left: 15px;
+    background: grey;
+    padding: 5px;
+}
+
+@media only screen and (min-width:768px){  
+
+    .card{
+        width: 80%;
+        margin-top: -50px;
+        height: 55%;
+    }
+
+    #hid{
+        display: block;
+        font-size: 50px;
+        font-weight: 600;
+        padding: 10px;
+        padding-left: 20px;
+        color: rgb(19, 84, 187);
+    }
+
+    .card span{
+        display: block;
+    }
+
+    #ref-icon{
+        text-align: start;
+        padding-left: 5%;
+    }
+
+    #strong{
+        padding-left: 20%;
+        font-weight: 600;
+    }
+
+    #ref-icon p{
+            margin-left: -5%;   
+            padding-left: 5px;
+        }
+
+    #ref-id{
+        margin-left: 0;
+        font-size: 50px;
+    }
+
+    .another{
+        margin-top: 50px;
+        height: 10%;
+        height: 5%;
+    }
+#ref-link{
+    width: 90%;
+    cursor: pointer;
+}
+
+#ref-link:hover{
+    background: rgba(1, 189, 17, 0.582);
+}
+
+.main-header-top p{
+    font-size: 48px;
+    padding-left: 7%;
+    padding-top: 2%;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-header-top{
+    height: 200px;
+}
+
+.another span p a{
+    width: 100%;
+    font-size: 16px;
+}
+
+.another span p{
+    font-size:16px;
+}
+
+.another span{
+    display: flex;
+}
+}

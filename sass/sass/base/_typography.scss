@@ -1,0 +1,92 @@
+
+body{
+    scroll-behavior: smooth;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height:1.7;
+    color: $color-grey-dark;
+}
+
+.heading-primary{
+    font-size: 4rem;
+    color:$text-color;
+    box-decoration-break: clone;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+    @include moveIn(left);
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    font-weight: 700;
+    background-image: linear-gradient(
+        to right,
+        $color-primary-light-1,
+        $color-primary-dark);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+}
+
+.heading-tertiary{
+    font-size: 1.8rem;
+    font-style: italic;
+    display: inline-block;
+    color:$text-color;
+    line-height: 7rem;
+    position: relative;
+    @include moveIn(left);
+
+    &--grey{
+        color: $color-grey-dark;
+    }
+
+    &::after{
+        content: "";
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        right: -60px;
+        top: 60%;
+        background: $text-color;
+    }
+}
+
+.heading-sub{
+    color: #222;
+    font-size: 2.8rem;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.heading-text{
+    font-size: 1.5rem;
+    color:$text-color;
+    font-weight: 500;
+    @include moveIn(right);
+
+    @include respond(tab-port){
+        font-size: 2rem;
+    }
+}
+
+.coin-img{
+    width: 100px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 10px;
+
+    @include respond(phone){
+        width: 80px;
+    }
+
+    
+    @include respond(phone-sm){
+        width: 100px;
+    }
+}
+

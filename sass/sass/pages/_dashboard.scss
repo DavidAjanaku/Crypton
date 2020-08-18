@@ -1,0 +1,375 @@
+.dashview{
+    position: relative;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    background: $color-grey-light-1;
+    display:grid;
+    grid-template-columns: 250px 1fr;
+
+    @include respond(tab-land){
+       height: fit-content;
+    }
+
+    @include respond(tab-port){
+        top: 0;
+        left: 0;
+        grid-template-columns: 100%;
+    }
+}
+
+.aside{
+    background: $color-primary-dark-1;
+
+    &__list{
+        list-style: none;
+
+        @include respond(tab-port){
+            display: flex; 
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        display: block;
+        border-left: 5px solid transparent;
+
+        @include respond(tab-port){
+            &:first-child{
+                margin-right: 1em;
+                font-size: 2rem;
+            }
+        }
+
+        span{
+            color: $text-color-grey;
+        }
+
+        &.active{
+            background: darken($color-primary-dark-1, 3%);
+            border-left: 5px solid $color-primary-light-1;
+            
+
+            span{
+                color: $color-white;
+            }
+        }
+
+        &:not(:first-child){
+            padding:15px 30px 15px 25px;
+            transition: all 650ms;
+
+            &:hover{
+                @extend .aside__item.active;
+
+            }
+        }
+
+       
+    }
+
+    &__link:link,
+    &__link:visited{
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    .balance-check{
+        margin: 1em 0em;
+        margin-bottom: 5rem;
+        padding: 0 1em;
+        color: $color-white;
+    
+    
+        &__header{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 200;
+        }
+    }
+    
+    .coin-balance{
+        font-family: monospace;
+        font-size: 1.7rem;
+        padding-right: .5em;
+
+        @include respond(tab-port){
+            font-size: 3rem;
+        }
+    }
+    
+    .coin-type{
+        @extend .coin-balance;
+        color: $color-primary-light;
+    }
+    
+   
+}
+
+.figure-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &__img{
+        margin-right: .8rem;
+        display: inline-block;
+        position: relative;
+        width: 25px;
+
+        @include respond (tab-port){
+            margin-right: 2rem;
+        }
+    }
+
+    &__icon{
+        font-size: 2.24rem;
+        color: $color-primary-light;
+        margin-right: .8rem;
+        display: inline-block;
+        position: relative;
+        width: 25px;
+    }
+
+    &__text{
+        text-transform:capitalize;
+        font-size: 1.5rem;
+
+        @include respond (tab-port){
+            font-size: 2rem;
+        }
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-template-rows:80px 1fr 1fr;
+    grid-gap: 10px;
+    margin:.7em 1em;
+
+    @include respond(tab-port){
+        grid-template-columns: 1fr;;
+    }
+
+    &__top{
+        grid-column: 1/-1;
+        height: 80px;
+        padding: 0 1em;
+
+
+        &__heading{
+            color: $color-primary-dark;
+            font-size: 3rem;
+            font-weight: 300;
+            display: inline-block;
+        }
+
+        &__desc{
+            font-size: 1.5rem;
+            color: darken($text-color-grey , 5%);
+            display: block;
+
+            @include respond(phone){
+                font-size: 2rem;
+            }
+
+        }
+    }
+
+    &__left,
+    &__right{
+        background: $color-white;
+        grid-row: 2/-1;
+        padding: 1em;
+        border-radius: 5px;
+
+       
+    }
+
+    &__left{
+
+        @include respond(tab-port){
+            grid-row: 2 / 3 ;
+        }
+
+        &--top{
+            width: 100%;
+            padding: 1em;
+            text-align: center;
+        }
+
+        &__shape{
+            width: 15rem;
+            height: 15rem;
+            background-color: $color-primary-dark;
+            clip-path: circle(50% at 50% 50%);
+            display: inline-block;
+            position: relative;
+
+            @include respond(tab-port){
+                width: 20rem;
+                height: 20rem;
+            }
+
+
+
+            &:hover{
+                .main__left__caption{
+                    opacity: 1;
+                    transform: translate(-50%,-50%);
+                }
+
+                .main__left__img{
+                    transform: translateX(-4rem) scale(1);
+                    filter: blur(3px) brightness(80%);
+                }
+            }
+        }
+
+        &__img{
+            height: 100%;
+            transform: translateX(-4rem) scale(1.4);
+            backface-visibility: hidden;
+            transition: all .5s;
+        }
+
+        &__caption{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,20%);
+            color: $text-color;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            text-align: center;
+            opacity: 0;
+            transition: all .5s;
+            backface-visibility: hidden;
+            @include respond(tab-port){
+                font-size: 2rem;
+            }
+        }
+
+        &--bottom{
+            &__list{
+               background-color: lighten($color-primary-dark-1,10%);
+               list-style: none;
+               border-radius: 1em;
+               overflow: hidden;
+            }
+
+            &__item{
+                padding:15px 30px 15px 25px;
+
+                span{
+                    font-family: $font-primary;
+                    color: $text-color-grey;
+                    font-weight: 300;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: lighten($color-primary-dark-1,5%);
+                }
+            }
+            
+        }
+    }
+
+    &__right{
+        position: relative;
+
+        @include respond(tab-port){
+            grid-row: 3 /-1 ;
+        }
+
+        &__top{
+
+            .coin-img-box,
+            .coin-price-box{
+                padding: 1em 0;
+                text-align: center;
+            }
+
+            .coin-price-box{
+                font-size: 1.5rem;
+                @include respond(tab-port){
+                    font-size: 2rem;
+                }
+                @include respond(phone){
+                    font-size: 2.5rem;
+                }
+            }
+
+        }
+
+        &__middle{
+            text-align: center;
+            max-height: 280px;
+            overflow: hidden;
+            width: 100%;
+
+
+            @include respond(tab-port){
+                font-size: 2rem;
+            }
+            @include respond(phone){
+                font-size: 2.5rem;
+            }
+            
+        }
+
+        &__bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1em 0;
+            width: 100%;
+            text-align: center;
+
+            @include respond(tab-land){
+                display: flex;
+                justify-content: space-evenly;
+
+            }
+
+            @include respond(phone){
+                flex-direction: column;
+            }
+
+            .dash-deposit,
+            .dash-withdraw{
+                display: inline-block;
+                color: #fff;
+                border-radius: 5px;
+                margin-right: 32px;
+
+                @include respond(tab-land){
+                    margin: 0;
+                }
+
+                @include respond(tab-port){
+                   width: 200px;
+                }
+
+                @include respond(phone){
+                   width: 100%;
+                    border-radius: 0;
+                    font-size: 2rem;
+                }
+
+            }
+
+            .dash-deposit{
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+}
+
+
+

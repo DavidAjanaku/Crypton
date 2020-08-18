@@ -1,0 +1,55 @@
+// FONTS
+@font-face{
+    font-family: "Lato";
+    src: url("fonts/Lato/Lato-Regular.ttf");
+}
+
+
+
+
+//COLORS
+$color-primary:#0088a9;
+$color-primary-light:#49d3f5;
+$color-primary-light-1:#00c4f5;
+$color-primary-dark:#379db7;
+$color-primary-dark-1:#34495e;
+
+
+$color-secondary-dark:#ff7730;
+$color-secondary-light:#ffb900;
+$color-trans-btn: #16a085;
+$color-trans-btn-dark: #12826c;
+
+$color-tertiary-light:#2998ff;
+$color-tertiary-dark:#5643fa;
+
+
+$color-grey-background:#f4f6f9;
+$color-grey-dark:#777;
+$color-grey-dark-1:#eee;
+$color-grey-dark-2: #999;
+$color-grey-light:#ccc;
+$color-grey-light-1:#f7f7f7;
+
+
+$color-dark:#24252a;
+
+
+$font-primary: 'Lato';
+// $font-display: 'Josefin Sans', sans-serif;
+
+
+$text-color:#edf0f1;
+$text-color-dark:#222;
+$text-color-grey:#dadde3;
+
+$color-white:#ffffff;
+$color-shadow:rgb(0,0,0);
+
+// GRID-VARIABLES
+$grid-width:114rem;
+$flex-width:124rem;
+$gutter-vertical:8rem;
+$gutter-horizontal:6rem;
+
+

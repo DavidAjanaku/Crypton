@@ -1,0 +1,70 @@
+.btn{
+   &:link,
+   &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.5rem;
+   }
+
+   &:hover{
+       transform: translateY(-3px);
+       box-shadow: 0 10px 20px rgba($color-shadow,.2);
+
+       &::after{
+           transform: scaleX(1.4) scaleY(1.6);
+           opacity: 0;
+       }
+   }
+
+   &:active{
+       transform: translateY(-1px);
+       box-shadow: 0 5px 10px rgba($color-shadow,.2);
+   }
+
+   &::after{
+       content:"";
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       border-radius: 100px;
+       padding: inherit;
+       top: 0;
+       left: 0;
+       z-index: -1;
+       transition: all .4s;  
+   }
+
+   &-blue{
+    background-image: linear-gradient(
+        to bottom right,
+        $color-primary-dark,
+        $color-primary-light,
+    );
+    color: $color-white;
+
+        &::after{
+            content:"";
+            background-image: linear-gradient(
+            to bottom right,
+            $color-primary-dark,
+            $color-primary-light,
+        );
+        }
+   }
+
+    &--transaction{
+        background-color: $color-trans-btn;
+        &:hover{
+            background-color: $color-trans-btn-dark;
+        }
+    }
+ 
+
+}
+
+
