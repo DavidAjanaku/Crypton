@@ -1385,8 +1385,8 @@ body {
 .section-investment {
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.7)), to(rgba(86, 67, 250, 0.7))), url("../images/angled-shapes-BW.jpg");
-  background-image: linear-gradient(to bottom right, rgba(41, 152, 255, 0.7), rgba(86, 67, 250, 0.7)), url("../images/angled-shapes-BW.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.7)), to(rgba(86, 67, 250, 0.7))), url("../../images/angled-shapes-BW.jpg");
+  background-image: linear-gradient(to bottom right, rgba(41, 152, 255, 0.7), rgba(86, 67, 250, 0.7)), url("../../images/angled-shapes-BW.jpg");
   background-position: center;
   margin-top: -15rem;
   padding: 15rem 0;
@@ -1444,28 +1444,6 @@ body {
   position: relative;
 }
 
-.top__header span:hover::after {
-  content: attr(data-title);
-  position: absolute;
-  z-index: 5;
-  font-size: 1rem;
-  background-color: #555;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-  width: 120px;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
 .bottom {
   position: absolute;
   top: 16rem;
@@ -1497,10 +1475,6 @@ body {
 .bottom__box {
   width: 50%;
   padding: 2em;
-}
-
-.bottom__box--deposit {
-  display: none;
 }
 
 @media (max-width: 56.25em) {
@@ -1582,9 +1556,56 @@ body {
   }
 }
 
-.coin-form__label {
+.coin-form__label, .message {
   display: block;
   font-size: small;
+}
+
+.coin-form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.coin-form__radio-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem;
+}
+
+.coin-form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #49d3f5;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem;
+}
+
+.coin-form__radio-button::after {
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #49d3f5;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.coin-form__radio-input {
+  display: none;
+}
+
+.coin-form__radio-input:checked ~ .coin-form__radio-label .coin-form__radio-button::after {
+  opacity: 1;
 }
 
 .coin-form__input, .coin-form__input--amount-box {
@@ -1636,6 +1657,10 @@ body {
 
 .coin-form__input--amount-box:focus-within, .coin-form__input--amount-box--amount-box:focus-within {
   border: 0.5px solid #0088a9;
+}
+
+.coin-form__input--amount-box.warn, .coin-form__input--amount-box--amount-box.warn {
+  border: .5px solid crimson;
 }
 
 .coin-form__input--amount, .coin-form__input--amount-box--amount {
@@ -1742,12 +1767,16 @@ body {
   visibility: visible;
 }
 
-.deposit .bottom__box--deposit {
-  display: block;
+.message {
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-top: 5px;
+  color: crimson;
+  display: none;
 }
 
-.deposit .bottom__box--withdraw {
-  display: none;
+.warn {
+  display: block;
 }
 
 .dashview {
@@ -1872,6 +1901,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1909,6 +1941,16 @@ body {
   .figure-box__text {
     font-size: 2rem;
   }
+}
+
+.figure-box .avil-bal {
+  margin-left: auto;
+  color: #dadde3a1;
+}
+
+.figure-box .avil-bal::before {
+  content: '$';
+  padding-right: 3px;
 }
 
 .main {
