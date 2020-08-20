@@ -113,6 +113,10 @@ input[type=text], input[type=password], [type=email]{
     border-radius: 10px;
   }
 
+  .footer{
+    display: none;
+  }
+
  
   @media only screen and (min-width:768px){  
 
@@ -125,7 +129,13 @@ input[type=text], input[type=password], [type=email]{
       margin: 0;
 
   }
+.footer{
+  display: block;
+}
 
+  .footer-nav{
+    margin-top: -200px;
+  }
   #top{
     display: block;
     padding-bottom: 100px;
@@ -147,6 +157,7 @@ input[type=text], input[type=password], [type=email]{
     opacity: 1; 
     background-size: cover;
     background-repeat: no-repeat;
+    height: 800px;
   }
 
     .container{
@@ -195,7 +206,7 @@ input[type=text], input[type=password], [type=email]{
         top:0px;
         left: 0px;
         width:50%;
-        height:100%;
+        height:800px;
         z-index:-1;
         opacity: 1; 
         background-size: cover;
@@ -279,5 +290,7 @@ input[type=text], input[type=password], [type=email]{
     background-color: darkcyan;
     border-radius: 10px;
   }
+
+  
 
   }

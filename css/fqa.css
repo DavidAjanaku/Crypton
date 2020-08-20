@@ -18,12 +18,16 @@ color: #fff;
   padding: 10px;
   text-align: center;
 }
-
+.footer{
+  display: none;
+}
 
 
 .content {
   width: 100%;
   padding-left: 15px;
+  height: 1100px;
+  
 }
 
 .centerplease {
@@ -70,7 +74,7 @@ color: #fff;
   color:#fff;
   position: absolute;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 17px;
   z-index: 5;
   font-size: 2em;
   line-height: 100%;
@@ -95,13 +99,26 @@ color: #fff;
 .questions {
   display: none;
 }
-
+.footer{
+  padding-top: 50%;
+}
 @media only screen and (min-width:768px){  
 #fqa-head{
   padding-top: 100px;
   text-align: center;
   font-size: 40px;
   margin: auto;
+}
+
+.content{
+  height: 820px;
+}
+
+.footer-nav li{
+  margin-top: -300px;
+}
+.footer{
+  display: block;
 }
 
 }
