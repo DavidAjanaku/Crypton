@@ -21,9 +21,35 @@ h4{
   padding: 10px;
 }
 
+.terms-content{
+  padding-top: 50px;
+  text-align: center;
+  padding: 20px;
+}
 
+.terms-content h3{
+  background: none;
+  color: rgb(51, 48, 246);
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+  
+}
 
+.terms-content strong{
+  color: rgb(67, 31, 228);
+}
 
+.terms-content p{
+  color: #0088a9;
+}
+
+.conditions{
+  font-size: 16px;
+}
+
+.u{
+padding: 10px;}
 
 
 
@@ -178,8 +204,8 @@ input[type=text], input[type=number], [type=email], textarea{
     color: rgb(5, 5, 5);
     font-size: 16px;
 	text-align: center;
-	border-radius: 20px;
-	margin: 0 0 20px 0;
+	border-radius: 0px;
+	margin: 0 0 -10px 0;
 	padding: 10px;
 	border: none;
   }
@@ -662,7 +688,14 @@ input[type=text], input[type=number], [type=email], textarea{
   }
   
 
+.terms-content{
+  padding-top: 100px;
+  
+}
 
+.terms-content h3{
+  font-size: 40px;
+}
  
 
 	h1{
@@ -768,9 +801,9 @@ input[type=text], input[type=number], [type=email], textarea{
 }
 
 .box{
-  width: 60%;
+  width: 50%;
   border-radius: 0;
-  height: 400px;
+  height: 200px;
 }
 
 

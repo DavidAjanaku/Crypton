@@ -77,6 +77,8 @@
     padding: 5px;
 }
 
+
+
 @media only screen and (min-width:768px){  
 
     .card{
@@ -147,6 +149,7 @@
 .another span p a{
     width: 100%;
     font-size: 16px;
+    color: #fff;
 }
 
 .another span p{
@@ -155,5 +158,6 @@
 
 .another span{
     display: flex;
+
 }
 }

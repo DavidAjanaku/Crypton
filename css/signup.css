@@ -106,6 +106,7 @@ input[type=text], input[type=password], [type=email]{
 
     .log-btn{
       color: rgb(39, 236, 236);
+      font-size: 16px;
     }
   
   .click-btn:hover{

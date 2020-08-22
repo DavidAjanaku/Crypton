@@ -10,8 +10,14 @@
 var modelController = (function(){
     var  data = {
         balance : 0,
-        type : ""
+        type : "",
+        curInvestmentplan:'red',
+        minDeposit : {
+            green : 1000,
+            red : 50
+        }
     }
+
 
     return{
         newBal : function(bal){
@@ -24,43 +30,48 @@ var modelController = (function(){
 
         newData : function(){
             return data;
+        },
+
+        getInvestmentPlan : function(){
+            return data.curInvestmentplan;
+        },
+
+        setInvestmentPlan : function(plan){
+            data.curInvestmentplan = plan;
         }
+
+
     }
    
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var UIController = (function(){
     var domStrings = {
         selectInput : '.coin-select__input',
         coinBalance : '.coin-details__balance',
         amountType : '.amount-type',
-        balace : '#coin-balance',
-        transactionBottom : '.bottom',
-        depositLink : '.deposit-link',
-        withdrawLink : '.withdraw-link'
+        balance : '#coin-balance',
+        coin_amount_deposit : '.min-dep',
+        radioInput : 'input[name="package"]',
+        warning_message:'.message'
     };
 
     return{
-
-        getBottom : function(){
-            return document.querySelector(domStrings.transactionBottom);
-        },
-
-        setCLass : function(klass){
-            var surpposedClass = 'deposit';
-            
-                if(klass === surpposedClass){
-                    if(!this.classList.contains(surpposedClass))
-                        this.classList.add(surpposedClass);
-                    else
-                        return;
-                }else{
-                    this.classList.remove(surpposedClass);
-                }
-        },
-
-
 
         getInput : function(){
             return document.querySelector(domStrings.selectInput).value;
@@ -69,49 +80,108 @@ var UIController = (function(){
         setType : function (type){
             document.querySelector(domStrings.coinBalance).setAttribute('data-text',type);
             document.querySelector(domStrings.amountType).innerHTML = type;
-            document.querySelector(domStrings.balace).setAttribute('data-text',type);
+            document.querySelector(domStrings.balance).setAttribute('data-text',type);
+        },
+
+        displayMinDep_Amt : function(plan){
+            document.querySelector(domStrings.coin_amount_deposit).placeholder=plan; 
+        },
+
+        getAmountValue : function(){
+            return parseInt(document.querySelector(domStrings.coin_amount_deposit).value);
         },
 
         getDomStrings : function () {
             return domStrings;
+        },
+
+        toggleWarning : function(boolean){
+            var MESSAGE = document.querySelector(domStrings.warning_message);
+            var INPUT_BOX = MESSAGE.previousElementSibling;
+            var INPUT = MESSAGE.previousElementSibling.firstElementChild;
+
+
+            
+           
+
+           !boolean ? MESSAGE.classList.add('warn') : MESSAGE.classList.remove   ('warn');
+
+            !boolean ? INPUT_BOX.classList.add('warn') : INPUT_BOX.classList.remove('warn');
+
+            if (INPUT.value === "") {
+                MESSAGE.classList.remove('warn');
+                INPUT_BOX.classList.remove('warn');
+            }
+
+          
+        
+
+        },
+
+        changeWarnText : function(pckg,amt){
+
+            var NEW_MESSAGE_TEXT = `minimum deposit for ${pckg} Package is ${amt}`;
+
+            document.querySelector(domStrings.warning_message).textContent = NEW_MESSAGE_TEXT;
+          
         }
+
     }
+
     
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
 
 var appController = (function (model,view) {
 
     var setupEventListeners = function(){
         var DOM = view.getDomStrings();
-        document.querySelector(DOM.selectInput).addEventListener('change',ctrlChangeItem);
+        var inputs = document.querySelectorAll(DOM.radioInput);
+        var inputArr = Array.prototype.slice.call(inputs);
+
+
 
         ctrlChangeItem();
+        document.querySelector(DOM.selectInput).addEventListener('change',ctrlChangeItem);
+        document.querySelector(DOM.coin_amount_deposit).addEventListener('input',ctrlValidateInput);
 
-        document.querySelector(DOM.depositLink).addEventListener('click',ctrlToggleDeposit);
+           inputArr.forEach(function(cur){
+               cur.addEventListener('change',function(){
+                    // 1. set new investment plan
+                        model.setInvestmentPlan(cur.id)
 
-        document.querySelector(DOM.withdrawLink).addEventListener('click', ctrlToggleDeposit);
+                    // 2. get new investment plan
+                        var currentPlan = model.getInvestmentPlan();
+
+                    // 3. change UI minimum deposit
+                        ctrlChangeUIDeposit(currentPlan);
+
+                    // 4. Allow package change
+                        ctrlValidateInput();
+
+
+               });
+           });
+
+    
 
     }
 
-    var ctrlToggleDeposit = function(e){
-        // 1. GET BOTTOM ELEMENT
-        var bottom = view.getBottom();
-
-        // 2. GET TARGET OF ELEMENT CLICKED
-        var elementText = e.target.innerHTML.toLowerCase();
-
-        // 3. BIND THE "THIS" VARIABLE OF THE SETCLASS METHOD TO BOTTOM AND STORE IN A VARIABLE
-        var element = view.setCLass.bind(bottom);
-
-        // 4. CALL THE BOUNDED FUNCTION STORED IN THE VARIABLE
-        element(elementText);
-
-        
-        
-    }
 
     var ctrlChangeItem = function(){
+
         var item;
         // 1. GET INPUT
         item = view.getInput();
@@ -126,11 +196,34 @@ var appController = (function (model,view) {
         view.setType(newData.type);
     };
 
+    var ctrlChangeUIDeposit = function(plan){
+        var planValue = model.newData().minDeposit[plan];
+
+        planValue = Math.abs(planValue);
+
+        planValue = planValue.toFixed(2);
+
+        planValue = 'Minimum deposit of $' + planValue;
+
+        view.displayMinDep_Amt(planValue);
+
+    };
+
+    var ctrlValidateInput = function(){
+        var type = model.getInvestmentPlan();
+        var amt = model.newData().minDeposit[type];
+        var  val = view.getAmountValue();
+
+       view.toggleWarning(val > amt);
+       view.changeWarnText(type, amt);
+    };
+
     
     return{
         init:function() {
             console.log('App is running');
             setupEventListeners();
+            ctrlChangeUIDeposit('red');
         }
     }
     
