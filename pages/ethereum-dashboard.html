@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://kit.fontawesome.com/c42702229f.js" ></script>
     <link rel="stylesheet" href="../Crypton Project/css/style.css">
+    <link rel="stylesheet" href="../css/table.css">
 </head>
 <body>
 
@@ -23,7 +24,16 @@
     background: azure;
     height: 70px;
 }
+.footer{
+    margin-top: 1em;
+}
 
+@media only screen and (min-width:1024px){ 
+    
+    .footer{
+    margin-top: 25em;
+}
+}
 
     </style>
     <div class="menu">
@@ -196,7 +206,27 @@
                 </div>
             </div>
         </div>
+     
+        <h1 id="table-head">Transaction History</h1>
 
+        <table class="rwd-table">
+
+          <tr>
+            <th>Invested At</th>
+            <th>Deadline</th>
+            <th>Deposit Amount</th>
+            <th>Profit</th>
+            <th>Time Left</th>
+          </tr>
+          <tr>
+            <td data-th="Movie Title">Monday 20 May 2020</td>
+            <td data-th="Genre">Tuesday 07 June 2020 </td>
+            <td data-th="Year">50$</td>
+            <td data-th="Gross">$62</td>
+            <td>342:23:34</td>
+          </tr>
+      
+        </table>
    </section>
    <footer class="footer">
     <ul class="footer-nav">
