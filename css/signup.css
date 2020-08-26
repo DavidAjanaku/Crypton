@@ -147,12 +147,12 @@ input[type=text], input[type=password], [type=email]{
     background: none;
   }
   .body::before{
-    background-image: url(../images/currency.png);
+    background-image: url(../images/ico.png);
     content: "";
     position: absolute;
-    top: 0px;
+    top: 40px;
     right: 0px;
-    width:65%;
+    width:60%;
     height:100%;
     z-index:-1;
     opacity: 1; 
