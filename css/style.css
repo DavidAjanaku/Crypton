@@ -207,7 +207,8 @@ input[type=text], input[type=number], [type=email], textarea{
 	border-radius: 0px;
 	margin: 0 0 -10px 0;
 	padding: 10px;
-	border: none;
+  border: none;
+  margin-bottom: 10px;
   }
 
   h1{
@@ -354,14 +355,20 @@ input[type=text], input[type=number], [type=email], textarea{
     font-size:15px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+
   }
   .form .body .form-row input {
     width:80% auto;
    
   }
+
+  label{
+    margin-bottom: -40px;
+    font-weight: 600;
+  }
   .form-row{
     text-align: center;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
   }
   h3{
     background: rgb(29, 155, 245);
@@ -649,30 +656,7 @@ input[type=text], input[type=number], [type=email], textarea{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
     }
-    .coin-converter{
-        margin: 100px 0;
-    }
 
-    .amount h6{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 30px;
-    }
-
-    .minWithdrawal{
-        color: red;
-        margin-top: -10px;
-    }
-
-    .btn-sing{
-        background-color: red;
-        width: 50%;
-        outline: none;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 20px;
-        color: #fff;
-        margin-top: 30px;
-    }
     .text{
         font-size: 15px;
         letter-spacing: 1px;
@@ -973,7 +957,7 @@ REFERRALS  */
 
 @media only screen and (min-width:1000px){  
 .down{
-  margin-top: -100%;
+  margin-top: -95%;
   margin-left: 10%;
 }
 
