@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptone</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../images/png/logo1.png" type="image/x-icon">
 </head>
@@ -51,24 +50,230 @@
         </nav>
     </div>
               
-  
-   
+ <style>
+     @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
+
+/* ------------- */
+/* GLOBAL STYLES */
+/* ------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #b8b9bb;
+  color: #485e74;
+  line-height: 1.6;
+  font-family: 'Yantramanav', sans-serif;
+  /* padding-top: 1em; */
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  padding-top: 100px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.brand {
+  text-align: center;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.brand span {
+  color: #ffffff;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(57, 82, 163, 0.7);
+}
+
+.wrapper > * {
+  padding: 1em;
+}
+
+/* ------------------- */
+/* COMPANY INFORMATION */
+/* ------------------- */
+
+.company-info {
+  background: #C3C9DD;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 20px;
+}
+
+/* ------- */
+/* CONTACT */
+/* ------- */
+
+.contact {
+  background: #dcdfea;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* ---- */
+/* FORM */
+/* ---- */
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+  font-size: 20px;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: solid 1px #627EDC;
+  border-radius: 4px;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  background: #627EDC;
+  border: 0;
+  color: #e4e4e4;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  color: #ffffff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media only screen and (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+
+  .company-info {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .contact {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+ 
+
+  h2{
+      color: black;
+  }
+}
+ </style>
         
 
-  <form action="" class="contact-form">
-      <input type="text" placeholder="Full name">
-      <br>
-      <input type="email" placeholder="E-mail" required>
-      <br>
-      <input type="number" min="11" max="20" placeholder="Phone number">
-      <br>
-    <textarea name="subject" id="subject" placeholder="Write a message" class="box" ></textarea>
+   <div class="container">
 
-    <br>
-    <br>
-    <input type="submit" value="submit">
+	<h1 class="brand"><span>CONTACT US</span></h1>
 
-</form>
+	<div class="wrapper">
+
+		<!-- COMPANY INFORMATION -->
+		<div class="company-info">
+			<h3 style="font-size: 40px;">Cryptone</h3>
+
+			<ul>
+				<li><i class="fa fa-phone"></i> <a href="">Telegram</a></li>
+				<li><i class="fa fa-envelope"></i> Cryptone@mail.com</li>
+			</ul>
+		</div>
+		<!-- End .company-info -->
+
+		<!-- CONTACT FORM -->
+		<div class="contact">
+			<h2>E-mail Us</h2>
+
+			<form id="contact-form">
+
+				<p>
+					<label>Name</label>
+					<input type="text" name="name" id="name" required>
+				</p>
+
+				
+
+				<p>
+					<label>E-mail Address</label>
+					<input type="email" name="email" id="email" required>
+				</p>
+
+				<p>
+					<label>Phone Number</label>
+					<input type="text" name="phone" id="phone">
+				</p>
+
+				<p class="full">
+					<label>Message</label>
+					<textarea name="message" rows="5" id="message"></textarea>
+				</p>
+
+				<p class="full">
+					<button type="submit">Submit</button>
+				</p>
+
+			</form>
+			<!-- End #contact-form -->
+		</div>
+		<!-- End .contact -->
+
+	</div>
+	<!-- End .wrapper -->
+</div>
+<!-- End .container -->
 
 <script src="../script/script.js"></script>
 <script src="../script/smooth-scroll.js"></script>
