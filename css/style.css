@@ -10,6 +10,9 @@ body{
 
 /* About Cryptone */
 
+
+
+
 h4{
   padding-top: 100px;
   font-size: 20px;
@@ -65,6 +68,11 @@ padding: 10px;}
 @media screen and (min-width: 768px) {
 .scrollmenu{
   display: none;
+}
+
+label{
+  margin-bottom: -40px;
+  font-weight: 600;
 }
 
 .wrapper{
@@ -362,10 +370,7 @@ input[type=text], input[type=number], [type=email], textarea{
    
   }
 
-  label{
-    margin-bottom: -40px;
-    font-weight: 600;
-  }
+  
   .form-row{
     text-align: center;
     padding: 20px 0 0 0;
@@ -378,16 +383,11 @@ input[type=text], input[type=number], [type=email], textarea{
     color: #fff;
     font-family: monospace;
     padding: 3px;
+    padding: 5PX;
+    font-size: 16px;
+    border-radius: 25px;
   }
 
-  .crypto{
-    width: 30px;
-  }
-  .crypton{
-    width: 20px;
-  }
- 
-  
   .form .body .rem-row > label {
     font-size:15px;
     margin-left:5px;
@@ -444,145 +444,13 @@ input[type=text], input[type=number], [type=email], textarea{
     width: 229.7px; height: 95px; margin-left: 13px; float: left; box-shadow: 0px 0px 11px #f2f5f6; -webkit-box-shadow: 0 0 11px #f2f5f6; -moz-box-shadow: 0 0 11px #f2f5f6;
   }
 
-  /*  WITHDRAWAL   */
-    /* h2{
-      text-align: center;
-      color: #fff;
-      font-family: cursive;
-      font-size: 30px;
-    } */
+  
 
     hr{
       width: 80%;
       margin: auto;
     }
 
-    #hexagon {
-      width: 35%;
-      height: 10%;
-      background: #fff;
-      position: relative;
-      margin:  150px 0 0 20px;
-      border-radius: 5px;
-    }
-
-    #input-wallet{
-      margin: 100px auto auto 40px;
-      
-    }
-
-  #input-wallet::placeholder{
-    font-size: 15px;
-  }
-
-    #hexagon:before {
-      content: "";
-      position: absolute;
-      top: -24px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-left: 65px solid transparent;
-      border-right: 65px solid transparent;
-      border-bottom: 25px solid #fff;
-    }
-    #hexagon:after {
-      content: "";
-      position: absolute;
-      bottom: -24px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-left: 65px solid transparent;
-      border-right: 65px solid transparent;
-      border-top: 25px solid #fff;
-    }
-
-   .minimum li{
-     list-style: none;
-   }
-   .minimum{
-     color: red;
-     text-align: center;
-     padding: 10px;
-     font-family: cursive;
-   }
-
-    
-
-    #hexagons {
-      width: 35%;
-      height: 10%;
-      background: #fff;
-      position: relative;
-      margin:  -68px 0 0 220px;
-      border-radius: 5px;
-    }
-    #hexagons:before {
-      content: "";
-      position: absolute;
-      top: -24px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-left: 65px solid transparent;
-      border-right: 65px solid transparent;
-      border-bottom: 25px solid #fff;
-    }
-    #hexagons:after {
-      content: "";
-      position: absolute;
-      bottom: -24px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-left: 65px solid transparent;
-      border-right: 65px solid transparent;
-      border-top: 25px solid #fff;
-    }
-
-    #hexagon ul li{
-      display: inline;
-      list-style: none;
-      font-weight: 900;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #hexagon ul{
-      text-align: center;
-    }
-
-    #hexagons ul li{
-      display: inline;
-      list-style: none;
-      font-weight: 800;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-    }
-
-    #hexagons ul{
-      text-align: center;
-    }
-
-
-    #hexagon p{
-      text-align: center;
-      padding: 6px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: lighter;
-      color: #777777;
-    }
-    #hexagons p{
-      text-align: center;
-      padding: 5px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #777777;
-
-    }
-
-    .mobile-version{
-      cursor: pointer;;
-    }
 
    
 
@@ -598,33 +466,6 @@ input[type=text], input[type=number], [type=email], textarea{
         background-image: url(..images/2.png);
     }
 
-   #etc{
-       width: 60px;
-   }
-
-    #ech{
-        width: 60px;
-    }
-
-    .wallet-choice{
-        display: inline-block;
-        padding: 10px;
-    }
-   
-    .wallet-choice a:active{
-        color: darkorange;
-    }
-
-    .wallet-choice:hover{
-        color: darkorange;
-    }
-    .wallet-choice a:checked{
-        color: darkorange;
-    }
-
-    .ethereum:hover{
-        color: grey;
-    }
     .text{
         text-align: center;
     }
@@ -744,50 +585,6 @@ input[type=text], input[type=number], [type=email], textarea{
   .click-btn:hover{
     background-color: darkcyan;
     border-radius: 10px;
-}
-.description{
-    text-align: center;
-    color: white;
-}
-
-.wallet-choice{
-    padding: 50px;
-}
-
-.amount h6{
-    font-size: 20px;
-}
-.text{
-    margin-top: 20px;
-}
-
-.btn-sing{
-    width: 20%;
-}
-.row h2{
-    position: absolute;
-    top: 20px;
-    left: 50px;
-}
-
-.form-table{
-    display: none;
-
-}
-
-#horizontal{
-    position: absolute;
-    left: 10px;
-}
-.contact-form{
-  position: absolute;
-  width: 100%;
-}
-
-.box{
-  width: 50%;
-  border-radius: 0;
-  height: 200px;
 }
 
 

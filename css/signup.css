@@ -13,6 +13,10 @@ body{
      background-color: transparent;
  } 
 
+ .reg input{
+   text-align: center;
+ }
+
  p,a{
      color: #fff;
      font-family: Arial, Helvetica, sans-serif;
