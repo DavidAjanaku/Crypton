@@ -151,7 +151,7 @@ input[type=text], input[type=password], [type=email]{
     background: none;
   }
   .body::before{
-    background-image: url(../images/login.png);
+    background-image: url(../images/Login.jpg);
     content: "";
     position: absolute;
     top: 40px;
